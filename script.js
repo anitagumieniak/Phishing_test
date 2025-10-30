@@ -226,8 +226,8 @@ if (!main) {
       <pre id="email-body" class="email-body"></pre>
 
       <div id="controls" class="controls">
-        <button id="btnPhishing" class="answer-btn" aria-pressed="false">🔴 Phishing</button>
-        <button id="btnSafe" class="answer-btn" aria-pressed="false">✅ Bezpieczne</button>
+        <button id="btnPhishing" class="answer-btn" aria-pressed="false"> Phishing</button>
+        <button id="btnSafe" class="answer-btn" aria-pressed="false"> Bezpieczne</button>
       </div>
 
       <div id="feedback" class="feedback hidden" role="status" aria-live="polite"></div>
@@ -326,11 +326,11 @@ function handleAnswer(chosenIsPhishing) {
   elNav.classList.remove("hidden");
 
   if (wasCorrect) {
-    elFeedback.innerHTML = `<strong class="ok">✅ Dobra odpowiedź!</strong><div class="explain">${explainAnswer(
+    elFeedback.innerHTML = `<strong class="ok"> Dobra odpowiedź!</strong><div class="explain">${explainAnswer(
       quizEmails[current]
     )}</div>`;
   } else {
-    elFeedback.innerHTML = `<strong class="bad">❌ Niepoprawnie.</strong><div class="explain">Poprawna odpowiedź: <strong>${
+    elFeedback.innerHTML = `<strong class="bad"> Niepoprawnie.</strong><div class="explain">Poprawna odpowiedź: <strong>${
       correct ? "Phishing" : "Bezpieczne"
     }</strong>.<br>${explainAnswer(quizEmails[current])}</div>`;
   }
