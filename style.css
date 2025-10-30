@@ -1,0 +1,55 @@
+:root {
+  --bg-color: #f8f9fa;
+  --text-color: #222;
+  --accent: #007bff;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+header {
+  background: var(--accent);
+  color: white;
+  padding: 1rem;
+}
+
+button {
+  margin: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.answer-btn {
+  background: var(--accent);
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+body.contrast {
+  --bg-color: #000;
+  --text-color: #ff0;
+  --accent: #ff0;
+}
+
+body {
+  transform: scale(var(--zoom, 1));
+  transform-origin: top center;
+}
