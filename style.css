@@ -1,55 +1,127 @@
 :root {
-  --bg-color: #f8f9fa;
-  --text-color: #222;
-  --accent: #007bff;
+  --bg-color: #fff7fa;          /* delikatne tło */
+  --card-bg: #ffffff;           /* jasne tło kart */
+  --text-color: #2b2b2b;        /* elegancki ciemny tekst */
+  --accent: #ff99cc;            /* pastelowy róż */
+  --accent-dark: #e06da3;       /* ciemniejszy róż */
+  --border-color: #f2d7e2;      /* lekki różowy kontur */
+  --shadow: rgba(0, 0, 0, 0.05);
 }
 
 body {
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Inter", "Poppins", "Segoe UI", sans-serif;
   background: var(--bg-color);
   color: var(--text-color);
-  text-align: center;
   margin: 0;
   padding: 0;
-  transition: all 0.3s ease;
+  line-height: 1.6;
 }
 
+/* Nagłówek */
 header {
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--accent-dark);
+  padding: 1.5rem 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+/* Główna sekcja */
+main {
+  max-width: 800px;
+  margin: 3rem auto;
+  background: var(--card-bg);
+  border-radius: 18px;
+  padding: 3rem 2rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 6px 18px var(--shadow);
+}
+
+/* Teksty */
+h1, h2, h3 {
+  color: var(--accent-dark);
+  margin-top: 0;
+  font-weight: 600;
+}
+
+p {
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+/* Przyciski */
+button {
   background: var(--accent);
   color: white;
-  padding: 1rem;
-}
-
-button {
-  margin: 0.5rem;
-  padding: 0.7rem 1.5rem;
-  border: none;
-  border-radius: 5px;
+  border: 1px solid var(--accent-dark);
+  border-radius: 12px;
+  padding: 0.9rem 2rem;
   font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 153, 204, 0.25);
 }
 
 button:hover {
-  opacity: 0.9;
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 153, 204, 0.3);
 }
 
-.answer-btn {
-  background: var(--accent);
-  color: white;
+button:active {
+  transform: scale(0.98);
 }
 
-.hidden {
-  display: none;
+/* Ramki / kontury */
+section {
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 2rem;
+  background: #fff;
+  box-shadow: inset 0 0 10px rgba(255, 153, 204, 0.05);
 }
 
+/* Tryb kontrastu */
+/* Tryb kontrastu – ciemny motyw: czarne tło, żółte akcenty */
 body.contrast {
-  --bg-color: #000;
-  --text-color: #ff0;
-  --accent: #ff0;
+  --bg-color: #000000;
+  --card-bg: #111111;
+  --text-color: #ffeb3b;      /* intensywny żółty tekst */
+  --accent: #ffeb3b;          /* żółty akcent */
+  --accent-dark: #fdd835;     /* lekko cieplejszy żółty przy hover */
+  --border-color: #333333;    /* delikatne odcięcie sekcji */
+  --shadow: rgba(255, 255, 0, 0.1);
 }
 
-body {
-  transform: scale(var(--zoom, 1));
-  transform-origin: top center;
+/* Responsywność */
+@media (max-width: 700px) {
+  main {
+    margin: 2rem 1rem;
+    padding: 2rem 1.2rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+#report {
+  text-align: left;
+  margin-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+}
+
+#report p {
+  margin: 0.5rem 0;
+}
+
+#report strong {
+  color: var(--accent-dark);
 }
