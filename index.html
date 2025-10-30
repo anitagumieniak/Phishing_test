@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz: Phishing czy nie?</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🔒 Quiz: Phishing czy nie?</h1>
+      <div class="controls">
+        <button id="toggleTheme">🌗 Tryb kontrastu</button>
+        <button id="zoomIn">➕+</button>
+        <button id="zoomOut">➖</button>
+      </div>
+    </header>
+
+    <main id="quiz">
+      <div id="question-container">
+        <p id="question"></p>
+        <div id="answers">
+          <button class="answer-btn" data-answer="phishing">To phishing</button>
+          <button class="answer-btn" data-answer="safe">Bezpieczne</button>
+        </div>
+      </div>
+
+      <div id="result-container" class="hidden">
+        <h2>Twój wynik:</h2>
+        <p id="score"></p>
+        <button id="restart">Zagraj ponownie</button>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
